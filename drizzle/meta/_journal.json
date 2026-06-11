@@ -1,0 +1,69 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1774785570154,
+      "tag": "0000_tranquil_lyja",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1774786004646,
+      "tag": "0001_faulty_inertia",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1774786057348,
+      "tag": "0002_vengeful_jane_foster",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1774812658073,
+      "tag": "0003_majestic_gauntlet",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1776124358537,
+      "tag": "0004_sync_schema_with_db",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1776124443328,
+      "tag": "0005_add_relations",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1776124687231,
+      "tag": "0006_add_performance_indexes",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1779000905830,
+      "tag": "0007_add_flower_tables",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1779011305087,
+      "tag": "0008_curvy_silver_samurai",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "query": "SHOW TABLES;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user pLMApY8xXnd1vku.0a777a8c3ad8 --database GHvM9jHA5PpD8tSaYENMCe --execute SHOW TABLES;",
+  "rows": [
+    {
+      "Tables_in_GHvM9jHA5PpD8tSaYENMCe": "__drizzle_migrations"
+    },
+    {
+      "Tables_in_GHvM9jHA5PpD8tSaYENMCe": "announcement_banners"
+    },
+    {
+      "Tables_in_GHvM9jHA5PpD8tSaYENMCe": "events"
+    },
+    {
+      "Tables_in_GHvM9jHA5PpD8tSaYENMCe": "invoices"
+    },
+    {
+      "Tables_in_GHvM9jHA5PpD8tSaYENMCe": "notifications"
+    },
+    {
+      "Tables_in_GHvM9jHA5PpD8tSaYENMCe": "order_items"
+    },
+    {
+      "Tables_in_GHvM9jHA5PpD8tSaYENMCe": "orders"
+    },
+    {
+      "Tables_in_GHvM9jHA5PpD8tSaYENMCe": "payments"
+    },
+    {
+      "Tables_in_GHvM9jHA5PpD8tSaYENMCe": "push_subscriptions"
+    },
+    {
+      "Tables_in_GHvM9jHA5PpD8tSaYENMCe": "ticket_types"
+    },
+    {
+      "Tables_in_GHvM9jHA5PpD8tSaYENMCe": "tickets"
+    },
+    {
+      "Tables_in_GHvM9jHA5PpD8tSaYENMCe": "users"
+    }
+  ],
+  "messages": [],
+  "stdout": "Tables_in_GHvM9jHA5PpD8tSaYENMCe\n__drizzle_migrations\nannouncement_banners\nevents\ninvoices\nnotifications\norder_items\norders\npayments\npush_subscriptions\nticket_types\ntickets\nusers\n",
+  "stderr": "",
+  "execution_time_ms": 2511
+}

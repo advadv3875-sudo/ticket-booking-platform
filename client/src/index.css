@@ -1,0 +1,339 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: 'Cairo', 'Noto Kufi Arabic', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ROYAL NAVY & FIRE ORANGE — DARK THEME (DEFAULT)
+   Navy: #0a1628  |  Orange: #FF6B00  |  Gold: #D4A843
+═══════════════════════════════════════════════════════════ */
+:root {
+  --radius: 0.625rem;
+
+  /* Primary = fiery orange */
+  --primary: oklch(65% 0.22 42);
+  --primary-foreground: oklch(98% 0 0);
+
+  /* Background = deep navy */
+  --background: oklch(13% 0.04 255);
+  --foreground: oklch(94% 0.01 80);
+
+  /* Cards = slightly lighter navy */
+  --card: oklch(17% 0.05 255);
+  --card-foreground: oklch(94% 0.01 80);
+
+  --popover: oklch(17% 0.05 255);
+  --popover-foreground: oklch(94% 0.01 80);
+
+  /* Secondary = mid navy */
+  --secondary: oklch(22% 0.05 255);
+  --secondary-foreground: oklch(85% 0.01 80);
+
+  --muted: oklch(20% 0.04 255);
+  --muted-foreground: oklch(58% 0.02 255);
+
+  /* Accent = gold */
+  --accent: oklch(72% 0.14 72);
+  --accent-foreground: oklch(12% 0.02 255);
+
+  --destructive: oklch(60% 0.22 25);
+  --destructive-foreground: oklch(98% 0 0);
+
+  --border: oklch(28% 0.05 255);
+  --input: oklch(24% 0.05 255);
+  --ring: oklch(65% 0.22 42);
+
+  /* Charts */
+  --chart-1: oklch(65% 0.22 42);
+  --chart-2: oklch(72% 0.14 72);
+  --chart-3: oklch(55% 0.18 255);
+  --chart-4: oklch(70% 0.12 140);
+  --chart-5: oklch(65% 0.18 25);
+
+  /* Sidebar */
+  --sidebar: oklch(11% 0.04 255);
+  --sidebar-foreground: oklch(90% 0.01 80);
+  --sidebar-primary: oklch(65% 0.22 42);
+  --sidebar-primary-foreground: oklch(98% 0 0);
+  --sidebar-accent: oklch(20% 0.05 255);
+  --sidebar-accent-foreground: oklch(85% 0.01 80);
+  --sidebar-border: oklch(25% 0.05 255);
+  --sidebar-ring: oklch(65% 0.22 42);
+}
+
+/* Light mode override (for admin panel readability) */
+.dark {
+  --primary: oklch(65% 0.22 42);
+  --primary-foreground: oklch(98% 0 0);
+  --background: oklch(13% 0.04 255);
+  --foreground: oklch(94% 0.01 80);
+  --card: oklch(17% 0.05 255);
+  --card-foreground: oklch(94% 0.01 80);
+  --popover: oklch(17% 0.05 255);
+  --popover-foreground: oklch(94% 0.01 80);
+  --secondary: oklch(22% 0.05 255);
+  --secondary-foreground: oklch(85% 0.01 80);
+  --muted: oklch(20% 0.04 255);
+  --muted-foreground: oklch(58% 0.02 255);
+  --accent: oklch(72% 0.14 72);
+  --accent-foreground: oklch(12% 0.02 255);
+  --destructive: oklch(60% 0.22 25);
+  --destructive-foreground: oklch(98% 0 0);
+  --border: oklch(28% 0.05 255);
+  --input: oklch(24% 0.05 255);
+  --ring: oklch(65% 0.22 42);
+  --chart-1: oklch(65% 0.22 42);
+  --chart-2: oklch(72% 0.14 72);
+  --chart-3: oklch(55% 0.18 255);
+  --chart-4: oklch(70% 0.12 140);
+  --chart-5: oklch(65% 0.18 25);
+  --sidebar: oklch(11% 0.04 255);
+  --sidebar-foreground: oklch(90% 0.01 80);
+  --sidebar-primary: oklch(65% 0.22 42);
+  --sidebar-primary-foreground: oklch(98% 0 0);
+  --sidebar-accent: oklch(20% 0.05 255);
+  --sidebar-accent-foreground: oklch(85% 0.01 80);
+  --sidebar-border: oklch(25% 0.05 255);
+  --sidebar-ring: oklch(65% 0.22 42);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cairo', 'Noto Kufi Arabic', system-ui, sans-serif;
+    background-color: #0a1628;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+  @media (min-width: 640px) {
+    .container { padding-left: 1.5rem; padding-right: 1.5rem; }
+  }
+  @media (min-width: 1024px) {
+    .container { padding-left: 2rem; padding-right: 2rem; max-width: 1280px; }
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ROYAL LUXURY BRAND STYLES
+═══════════════════════════════════════════════════════════ */
+
+/* Orange fire gradient text */
+.text-fire-gradient {
+  background: linear-gradient(135deg, #FF6B00 0%, #FF9A3C 40%, #FFB347 70%, #FF6B00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #D4A843 0%, #F5D78E 40%, #D4A843 70%, #A07830 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Royal navy-orange gradient text */
+.text-royal-gradient {
+  background: linear-gradient(135deg, #FF6B00 0%, #FFB347 50%, #D4A843 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Luxury card hover effect */
+.luxury-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.luxury-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,107,0,0.25);
+}
+
+/* Hero overlay — navy to transparent */
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.70) 50%, rgba(10,22,40,0.40) 100%);
+}
+
+/* Ticket card — navy with orange top accent */
+.ticket-card {
+  background: linear-gradient(135deg, #0d1e35 0%, #0a1628 50%, #0f2040 100%);
+  border: 1px solid rgba(255,107,0,0.25);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.ticket-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #FF6B00, #FFB347, #FF6B00);
+}
+
+/* Orange glow button */
+.btn-fire {
+  background: linear-gradient(135deg, #FF6B00 0%, #FF8C00 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 20px rgba(255,107,0,0.4);
+  transition: all 0.3s ease;
+}
+.btn-fire:hover {
+  background: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%);
+  box-shadow: 0 6px 30px rgba(255,107,0,0.6);
+  transform: translateY(-2px);
+}
+
+/* Navy card with orange border glow */
+.navy-card {
+  background: linear-gradient(145deg, #0f1e35 0%, #0a1628 100%);
+  border: 1px solid rgba(255,107,0,0.2);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+.navy-card:hover {
+  border-color: rgba(255,107,0,0.5);
+  box-shadow: 0 0 30px rgba(255,107,0,0.15);
+}
+
+/* Payment method card */
+.payment-method-card {
+  @apply border-2 border-border rounded-xl p-4 cursor-pointer transition-all duration-200;
+  background: rgba(15, 30, 53, 0.8);
+}
+.payment-method-card:hover {
+  border-color: rgba(255,107,0,0.5);
+  background: rgba(255,107,0,0.08);
+}
+.payment-method-card.selected {
+  border-color: #FF6B00;
+  background: rgba(255,107,0,0.12);
+  box-shadow: 0 0 20px rgba(255,107,0,0.2);
+}
+
+/* Luxury divider with orange glow */
+.luxury-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.luxury-divider::before,
+.luxury-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,107,0,0.5), transparent);
+}
+
+/* Section divider — navy to orange gradient */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #FF6B00 30%, #FFB347 50%, #FF6B00 70%, transparent 100%);
+  margin: 0;
+}
+
+/* Orange glow effect */
+.orange-glow {
+  box-shadow: 0 0 40px rgba(255,107,0,0.3), 0 0 80px rgba(255,107,0,0.1);
+}
+
+/* Navy surface */
+.navy-surface {
+  background: linear-gradient(145deg, #0f1e35 0%, #0a1628 100%);
+}
+
+/* Scrollbar */
+html { scroll-behavior: smooth; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0a1628; }
+::-webkit-scrollbar-thumb { background: rgba(255,107,0,0.35); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,107,0,0.65); }
+
+/* Animations */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes fire-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(255,107,0,0.3); }
+  50% { box-shadow: 0 0 40px rgba(255,107,0,0.6), 0 0 80px rgba(255,107,0,0.2); }
+}
+@keyframes navy-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.float-animation { animation: float 3s ease-in-out infinite; }
+.fire-pulse { animation: fire-pulse 2s ease-in-out infinite; }

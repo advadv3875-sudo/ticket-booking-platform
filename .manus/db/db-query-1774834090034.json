@@ -1,0 +1,50 @@
+{
+  "query": "SELECT id, code, description, discount_type, discount_value, usage_limit, used_count, is_active FROM coupons ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user pLMApY8xXnd1vku.0a777a8c3ad8 --database GHvM9jHA5PpD8tSaYENMCe --execute SELECT id, code, description, discount_type, discount_value, usage_limit, used_count, is_active FROM coupons ORDER BY id;",
+  "rows": [
+    {
+      "id": "1",
+      "code": "WELCOME10",
+      "description": "خصم 10% على جميع الفعاليات - غير محدود الاستخدام",
+      "discount_type": "percentage",
+      "discount_value": "10.00",
+      "usage_limit": "100",
+      "used_count": "0",
+      "is_active": "1"
+    },
+    {
+      "id": "2",
+      "code": "VIP20",
+      "description": "خصم 20% لعملاء VIP",
+      "discount_type": "percentage",
+      "discount_value": "20.00",
+      "usage_limit": "50",
+      "used_count": "0",
+      "is_active": "1"
+    },
+    {
+      "id": "3",
+      "code": "VIP50",
+      "description": "خصم VIP 50 دينار على الطلبات فوق 200 دينار",
+      "discount_type": "fixed",
+      "discount_value": "50.00",
+      "usage_limit": "20",
+      "used_count": "0",
+      "is_active": "1"
+    },
+    {
+      "id": "7",
+      "code": "EXPERT20",
+      "description": "خصم ترحيبي 20% للعملاء الجدد - Expert Plan by MUSTAFA ALJAZAEERI",
+      "discount_type": "percentage",
+      "discount_value": "20.00",
+      "usage_limit": "100",
+      "used_count": "0",
+      "is_active": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tcode\tdescription\tdiscount_type\tdiscount_value\tusage_limit\tused_count\tis_active\n1\tWELCOME10\tخصم 10% على جميع الفعاليات - غير محدود الاستخدام\tpercentage\t10.00\t100\t0\t1\n2\tVIP20\tخصم 20% لعملاء VIP\tpercentage\t20.00\t50\t0\t1\n3\tVIP50\tخصم VIP 50 دينار على الطلبات فوق 200 دينار\tfixed\t50.00\t20\t0\t1\n7\tEXPERT20\tخصم ترحيبي 20% للعملاء الجدد - Expert Plan by MUSTAFA ALJAZAEERI\tpercentage\t20.00\t100\t0\t1\n",
+  "stderr": "",
+  "execution_time_ms": 1517
+}

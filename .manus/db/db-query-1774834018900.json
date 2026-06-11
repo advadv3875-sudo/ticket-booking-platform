@@ -1,0 +1,34 @@
+{
+  "query": "SELECT id, code, description, discount_type, discount_value, is_active FROM coupons;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user pLMApY8xXnd1vku.0a777a8c3ad8 --database GHvM9jHA5PpD8tSaYENMCe --execute SELECT id, code, description, discount_type, discount_value, is_active FROM coupons;",
+  "rows": [
+    {
+      "id": "1",
+      "code": "WELCOME10",
+      "description": "خصم 10% للعملاء الجدد",
+      "discount_type": "percentage",
+      "discount_value": "10.00",
+      "is_active": "1"
+    },
+    {
+      "id": "2",
+      "code": "VIP20",
+      "description": "خصم 20% لعملاء VIP",
+      "discount_type": "percentage",
+      "discount_value": "20.00",
+      "is_active": "1"
+    },
+    {
+      "id": "3",
+      "code": "SAVE50",
+      "description": "خصم ثابت 50 دينار",
+      "discount_type": "fixed",
+      "discount_value": "50.00",
+      "is_active": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tcode\tdescription\tdiscount_type\tdiscount_value\tis_active\n1\tWELCOME10\tخصم 10% للعملاء الجدد\tpercentage\t10.00\t1\n2\tVIP20\tخصم 20% لعملاء VIP\tpercentage\t20.00\t1\n3\tSAVE50\tخصم ثابت 50 دينار\tfixed\t50.00\t1\n",
+  "stderr": "",
+  "execution_time_ms": 1566
+}
